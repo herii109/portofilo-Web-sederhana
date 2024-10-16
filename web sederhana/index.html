@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Heri</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #787878;
+        }
+
+        header {
+            background-color: #002cef;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #003feb;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        p {
+            color: #ffffff;
+        }
+
+        /* Specific Section Styles */
+        #intro {
+            background-color:cornflowerblue;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        #about, #projects, #contact {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        /* Project List */
+        #projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #projects ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        #projects ul li a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        #projects ul li a:hover {
+            color: #0056b3;
+        }
+
+        .project-detail {
+            display: none; /* Hide details by default */
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .read-more-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact Form Styles */
+        #contactForm {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contactForm label {
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        #contactForm input, #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #contactForm button {
+            padding: 10px;
+            background-color: #021bd8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contactForm button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #002cef;
+            color: rgb(255, 255, 255);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="intro">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Heri. I am passionate about web development and design.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer with experience in creating modern, responsive websites. I have a background in web development and specialize in frontend and backend development.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/[username]/project1">Project 1</a> - UI/UX Design pertama saya.
+                <button class="read-more-btn" data-project="project1">Read More</button>
+                <p class="project-detail" id="project1">Detail tentang Project 1: Ini adalah proyek UI/UX yang berfokus pada meningkatkan pengalaman pengguna dengan tampilan antarmuka yang responsif.</p>
+            </li>
+            <li>
+                <a href="https://github.com/[username]/project2">Project 2</a> - Project HTML pertama saya.
+                <button class="read-more-btn" data-project="project2">Read More</button>
+                <p class="project-detail" id="project2">Detail tentang Project 2: Ini adalah proyek dasar HTML yang mengajarkan struktur halaman web dan penataan elemen-elemen dasar.</p>
+            </li>
+            <li>
+                <a href="https://github.com/[username]/project3">Project 3</a> - Project JavaScript pertama saya.
+                <button class="read-more-btn" data-project="project3">Read More</button>
+                <p class="project-detail" id="project3">Detail tentang Project 3: Proyek ini berfokus pada interaktivitas menggunakan JavaScript untuk memanipulasi DOM dan menambah dinamika pada halaman web.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Heri - All Rights Reserved.</p>
+        <p>Follow me on <a href="https://github.com/[username]">GitHub</a>, <a href="https://linkedin.com/in/[username]">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Show/Hide Project Details
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const detailElement = document.getElementById(projectId);
+                if (detailElement.style.display === 'none' || detailElement.style.display === '') {
+                    detailElement.style.display = 'block';
+                    this.textContent = 'Read Less';
+                } else {
+                    detailElement.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+
+        // Validasi Formulir Kontak
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                event.preventDefault(); // Mencegah pengiriman form jika tidak lengkap
+            } else {
+                alert('Your message has been sent successfully!');
+            }
+        });
+    </script>
+
+</body>
+</html>
